@@ -1,18 +1,6 @@
 -- Group 4 SQL DDL 
 
--- 1. Inquiry table
-CREATE TABLE IF NOT EXISTS Inquiry (
-inquiry_id INT AUTO_INCREMENT PRIMARY KEY,
-user_id    INT NOT NULL,
-email      VARCHAR(255) NOT NULL,
-full_name  VARCHAR(150) NOT NULL,
-subject    VARCHAR(255) NOT NULL,
-message    TEXT         NOT NULL,
-attachment VARCHAR(255),
-FOREIGN KEY (user_id) REFERENCES User(user_id)
-);
-
--- 2. User table
+-- 1. User table
 CREATE TABLE IF NOT EXISTS User (
 user_id       INT            AUTO_INCREMENT PRIMARY KEY,
 email         VARCHAR(255)   NOT NULL UNIQUE,
@@ -21,6 +9,14 @@ last_name     VARCHAR(100)   NOT NULL,
 phone         VARCHAR(20),
 password_hash VARCHAR(255)   NOT NULL,
 created_at    DATETIME       DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Room Type table
+CREATE TABLE IF NOT EXISTS RoomType (
+room_type_id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255) NOT NULL,
+description TEXT,
+price_per_night DECIMAL(10,2) NOT NULL
 );
 
 -- 3. Reservation table
@@ -38,21 +34,25 @@ FOREIGN KEY (user_ID)      REFERENCES User(user_id),
 FOREIGN KEY (room_type_id) REFERENCES RoomType(room_type_id)
 );
 
--- 4. Attractions table
+-- 4. Inquiry table
+CREATE TABLE IF NOT EXISTS Inquiry (
+inquiry_id INT AUTO_INCREMENT PRIMARY KEY,
+user_id    INT NOT NULL,
+email      VARCHAR(255) NOT NULL,
+full_name  VARCHAR(150) NOT NULL,
+subject    VARCHAR(255) NOT NULL,
+message    TEXT         NOT NULL,
+attachment VARCHAR(255),
+FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+-- 5. Attractions table
 CREATE TABLE IF NOT EXISTS Attractions (
 attraction_id INT PRIMARY KEY AUTO_INCREMENT,
 name VARCHAR(255) NOT NULL,
 description TEXT,
 price DECIMAL(10,2) NOT NULL,
 availability_status ENUM('Available','Unavailable') DEFAULT 'Available'
-);
-
--- 5. Room Type table
-CREATE TABLE IF NOT EXISTS RoomType (
-room_type_id INT PRIMARY KEY AUTO_INCREMENT,
-name VARCHAR(255) NOT NULL,
-description TEXT,
-price_per_night DECIMAL(10,2) NOT NULL
 );
 
 -- 6. Reservation Attraction table

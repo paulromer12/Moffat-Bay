@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>User Registration</title>
+    <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
     <h1>Register for Moffat Bay</h1>
 
-    <form action="RegisterServlet" method="post">
+    <!-- Error message block -->
+    <% if (request.getAttribute("error") != null) { %>
+        <p class="error"><%= request.getAttribute("error") %></p>
+    <% } %>
+
+    <form action="register" method="post">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
-    <h1>Register for Moffat Bay</h1>
+    <h1>Moffat Bay Registration</h1>
 
     <!-- Error message block -->
     <% if (request.getAttribute("error") != null) { %>
@@ -15,14 +15,14 @@
     <% } %>
 
     <form action="register" method="post">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" name="firstName" required><br><br>
 
         <label for="lastName">Last Name:</label>
         <input type="text" id="lastName" name="lastName" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
         <label for="telephone">Phone:</label>
         <input type="tel" id="telephone" name="telephone" required><br><br>

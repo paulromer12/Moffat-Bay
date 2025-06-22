@@ -3,7 +3,8 @@
 <html>
 <head>
   <title>Moffat Bay - Login</title>
-  <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
     <input type="text" name="username" placeholder="Username" required />
     <input type="password" name="password" placeholder="Password" required />
     <button type="submit">Login</button>
-    <a href="register.jsp" class="register-button">Register</a>
+    <a href="registration.jsp" class="register-button">Register</a>
 
     <% if (request.getAttribute("error") != null) { %>
       <p class="error"><%= request.getAttribute("error") %></p>

@@ -40,7 +40,7 @@ public class RegisterServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             try (Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "your_password_here")) {
+                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "your-password")) {
 
                 // Check for existing email
                 String checkSql = "SELECT email FROM User WHERE email = ?";

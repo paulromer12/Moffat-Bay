@@ -1,0 +1,115 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FEFAE0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #283618;
+}
+
+/* Top navigation bar */
+nav {
+  background-color: #283618;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FEFAE0;
+}
+
+/* Navigation links */
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: #FEFAE0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.navbar li a:hover {
+  background-color: #DDA15E;
+  color: #283618;
+}
+
+.navbar li a.active {
+  background-color: #BC6C25;
+}
+
+/* Login form container */
+.login-container {
+  width: 340px;
+  margin: 60px auto;
+  padding: 28px;
+  background-color: #fff;
+  border: 2px solid #DDA15E;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(40, 54, 24, 0.2);
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #606C38;
+  margin-bottom: 24px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #BC6C25;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Login button */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #BC6C25;
+  color: #FEFAE0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #DDA15E;
+  color: #283618;
+}
+
+/* Register link */
+.register-button {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+  color: #606C38;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 12px;
+}

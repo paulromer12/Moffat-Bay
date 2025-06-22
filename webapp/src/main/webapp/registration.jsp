@@ -4,33 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles/register.css">
 </head>
 <body>
-    <h1>Moffat Bay Registration</h1>
+    <nav>
+        <div class="logo">Moffat Bay Lodge</div>
+        <ul class="navbar">
+            <li><a href="index.jsp" class="active">Home</a></li>
+            <li><a href="cabins.jsp">Cabins</a></li>
+            <li><a href="attractions.jsp">Attractions</a></li>
+            <li><a href="about.jsp">About</a></li>
+            <li><a href="contact.jsp">Contact</a></li>
+            <li><a href="login.jsp">Login</a></li>
+        </ul>
+    </nav>
+  
+    <div class="register-container">
+        <h1>Guest Registration</h1>
+        <% if (request.getAttribute("error") != null) { %>
+            <p class="error"><%= request.getAttribute("error") %></p>
+        <% } %>
+        <form action="register" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
 
-    <!-- Error message block -->
-    <% if (request.getAttribute("error") != null) { %>
-        <p class="error"><%= request.getAttribute("error") %></p>
-    <% } %>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-    <form action="register" method="post">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br><br>
+            <label for="telephone">Phone:</label>
+            <input type="tel" id="telephone" name="telephone" required>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <label for="telephone">Phone:</label>
-        <input type="tel" id="telephone" name="telephone" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <input type="submit" value="Register">
-    </form>
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
 </html>

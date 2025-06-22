@@ -10,7 +10,7 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
 
-
+  
   <!-- LoginServlet Configuration -->
   <servlet>
     <servlet-name>LoginServlet</servlet-name>
@@ -22,7 +22,7 @@
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
 
-
+  <!-- RegistrationServlet Configuration -->
   <servlet>
     <servlet-name>RegisterServlet</servlet-name>
     <servlet-class>com.moffatbay.servlets.RegisterServlet</servlet-class>
@@ -32,3 +32,4 @@
     <url-pattern>/register</url-pattern>
   </servlet-mapping>
 </web-app>
+

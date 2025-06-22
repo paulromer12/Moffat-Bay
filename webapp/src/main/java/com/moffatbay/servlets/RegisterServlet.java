@@ -36,11 +36,12 @@ public class RegisterServlet extends HttpServlet {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
 
         try {
-            // Load MySQL JDBC driver (🔑 critical for many servlet containers)
+
+            // Load MySQL JDBC driver (critical for many servlet containers)
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             try (Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "BV-SQL@2025!")) {
+                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "your_password_here")) {
 
                 // Check for existing email
                 String checkSql = "SELECT email FROM User WHERE email = ?";

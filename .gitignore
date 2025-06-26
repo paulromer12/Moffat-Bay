@@ -87,3 +87,6 @@ replay_pid*
 /build/
 /.classpath
 /.project
+.classpath
+.project
+.gitignore

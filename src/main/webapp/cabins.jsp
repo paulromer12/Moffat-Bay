@@ -3,21 +3,33 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Room Reservation</title>
+    <title>Cabins</title>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <nav>
         <div class="logo">Moffat Bay Lodge</div>
-        <ul class="navbar">
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="cabins.jsp" class="active">Cabins</a></li>
-            <li><a href="attractions.jsp">Attractions</a></li>
-            <li><a href="about.jsp">About</a></li>
-            <li><a href="contact.jsp">Contact</a></li>
-            <li><a href="login.jsp">Login</a></li>
-        </ul>
+		<ul class="navbar">
+		    <li><a href="index.jsp" class="active">Home</a></li>
+		    <li><a href="cabins.jsp">Cabins</a></li>
+		    <li><a href="attractions.jsp">Attractions</a></li>
+		    <li><a href="about.jsp">About</a></li>
+		    <li><a href="contact.jsp">Contact</a></li>
+		    <%
+		        String user = (String) session.getAttribute("user");
+		        if (user != null) {
+		    %>
+		        <li><a href="account.jsp">Account</a></li>
+		        <li><a href="logout.jsp">Logout</a></li>
+		    <%
+		        } else {
+		    %>
+		        <li><a href="login.jsp">Login</a></li>
+		    <%
+		        }
+		    %>
+		</ul>
     </nav>
   
     <div class="register-container">

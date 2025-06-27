@@ -1,0 +1,101 @@
+/* Import clean, readable fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Noto+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.landing-container {
+    background: url('../images/cabin.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+/* Header with logo and nav */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    font-family: 'Merriweather', serif;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+    border-bottom: 2px solid #aaa;
+}
+
+/* Center content with button */
+.center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-content h2 {
+    font-size: 36px;
+    color: #edffef;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 10px;
+}
+
+.center-content p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.center-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.center-content button:hover {
+    background-color: #ddd;
+}

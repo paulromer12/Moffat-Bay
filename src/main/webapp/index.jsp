@@ -9,15 +9,17 @@
     <div class="landing-container">
         <header>
             <h1>Moffat Bay Lodge</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cabins</a></li>
-                    <li><a href="#">Activities</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+    <nav>
+        <div class="logo">Moffat Bay Lodge</div>
+        <ul class="navbar">
+            <li><a href="index.jsp" class="active">Home</a></li>
+            <li><a href="cabins.jsp">Cabins</a></li>
+            <li><a href="attractions.jsp">Attractions</a></li>
+            <li><a href="about.jsp">About</a></li>
+            <li><a href="contact.jsp">Contact</a></li>
+            <li><a href="login.jsp">Login</a></li>
+        </ul>
+    </nav>
         </header>
 
         <div class="center-content">

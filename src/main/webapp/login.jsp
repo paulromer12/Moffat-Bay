@@ -3,11 +3,11 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
     <div class="logo">Moffat Bay Lodge</div>
     <ul class="navbar">
@@ -20,6 +20,7 @@
     </ul>
 </nav>
 
+<!-- Login -->
 <div class="login-container">
     <form method="POST" action="login">
         <h2>Guest Login</h2>

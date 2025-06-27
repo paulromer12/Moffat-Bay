@@ -26,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
         // Validate email and password format
         boolean valid = isValidEmail(email) && isValidPassword(password);
         if (!valid) {
-            request.setAttribute("error", "Invalid email or password.");
+            request.setAttribute("error", "Invalid email or password. Ensure that passwords contain at least one lowercase letter, one uppercase letter, one number, and be at least 8 characters long.");
             request.getRequestDispatcher("/registration.jsp").forward(request, response);
             return;
         }
@@ -40,7 +40,7 @@ public class RegisterServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             try (Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "your-password")) {
+                    "jdbc:mysql://localhost:3306/moffatbay", "root", "root")) {
 
                 // Check for existing email
                 String checkSql = "SELECT email FROM User WHERE email = ?";

@@ -37,7 +37,7 @@
         <div class="center-content">
             <h2>Experience the Wilderness</h2>
             <p>Discover the serene beauty of Moffat Bay Lodge,<br>your perfect getaway in nature.</p>
-            <button onclick="location.href='booking.jsp'">Book Now</button>
+            <button onclick="location.href='reservation.jsp'">Book Now</button>
         </div>
     </div>
 </body>

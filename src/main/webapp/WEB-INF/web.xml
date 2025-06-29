@@ -41,15 +41,4 @@
   <servlet-name>ReservationServlet</servlet-name>
   <url-pattern>/ReservationServlet</url-pattern>
 </servlet-mapping>
-
-<!-- ReservationSummaryServlet Configuration -->
-<servlet>
-  <servlet-name>ReservationSummaryServlet</servlet-name>
-  <servlet-class>com.moffatbay.servlets.ReservationSummaryServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-  <servlet-name>ReservationSummaryServlet</servlet-name>
-  <url-pattern>/ReservationSummaryServlet</url-pattern>
-</servlet-mapping>
-
 </web-app>

@@ -22,7 +22,6 @@ CREATE TABLE IF NOT EXISTS User (
   password_hash VARCHAR(255)   NOT NULL,
   created_at    DATETIME       DEFAULT CURRENT_TIMESTAMP
 );
-
 -- 2. Inquiry table
 CREATE TABLE IF NOT EXISTS Inquiry (
   inquiry_id INT AUTO_INCREMENT PRIMARY KEY,

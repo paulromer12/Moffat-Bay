@@ -19,7 +19,7 @@
 
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/LoginServlet</url-pattern>
+    <url-pattern>/login</url-pattern>
   </servlet-mapping>
 
   <!-- RegistrationServlet Configuration -->
@@ -31,5 +31,15 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/register</url-pattern>
   </servlet-mapping>
+  
+  <!-- ReservastionServlet Configuration  -->
+  <servlet>
+  <servlet-name>ReservationServlet</servlet-name>
+  <servlet-class>com.moffatbay.servlets.ReservationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ReservationServlet</servlet-name>
+  <url-pattern>/ReservationServlet</url-pattern>
+</servlet-mapping>
 </web-app>
 

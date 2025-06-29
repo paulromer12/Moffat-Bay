@@ -56,7 +56,7 @@
         <div class="cta-item">
             <img src="images/about-cabin.jpg" alt="Cabins">
             <p>Cabins</p>
-            <a href="cabins.jsp"><button>Book Now</button></a>
+            <a href="registration.jsp"><button>Book Now</button></a>
         </div>
         <div class="cta-item">
             <img src="images/about-attraction.jpg" alt="Attractions">

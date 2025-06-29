@@ -72,7 +72,7 @@ public class ReservationServlet extends HttpServlet {
 
                     int rows = stmt.executeUpdate();
                     if (rows > 0) {
-                        response.sendRedirect("index.jsp");
+                        response.sendRedirect("ReservationSummaryServlet");
                     } else {
                         request.setAttribute("error", "Reservation failed. Please try again.");
                         request.getRequestDispatcher("reserve.jsp").forward(request, response);

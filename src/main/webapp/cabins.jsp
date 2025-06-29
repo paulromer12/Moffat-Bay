@@ -12,7 +12,7 @@
         <div class="logo">Moffat Bay Lodge</div>
 		<ul class="navbar">
 		    <li><a href="index.jsp" class="active">Home</a></li>
-		    <li><a href="cabins.jsp">Cabins</a></li>
+		    <li><a href="reservation.jsp">Cabins</a></li>
 		    <li><a href="attractions.jsp">Attractions</a></li>
 		    <li><a href="about.jsp">About</a></li>
 		    <li><a href="contact.jsp">Contact</a></li>
@@ -20,7 +20,7 @@
 		        String user = (String) session.getAttribute("user");
 		        if (user != null) {
 		    %>
-		        <li><a href="account.jsp">Account</a></li>
+		        <li><a href="ReservationSummaryServlet">Account</a></li>
 		        <li><a href="logout.jsp">Logout</a></li>
 		    <%
 		        } else {

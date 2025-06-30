@@ -18,7 +18,7 @@
     <div class="logo">Moffat Bay Lodge</div>
     <ul class="navbar">
         <li><a href="index.jsp">Home</a></li>
-        <li><a href="cabins.jsp">Cabins</a></li>
+        <li><a href="reservation.jsp">Cabins</a></li>
         <li><a href="attractions.jsp">Attractions</a></li>
         <li><a href="about.jsp">About</a></li>
         <li><a href="contact.jsp">Contact</a></li>

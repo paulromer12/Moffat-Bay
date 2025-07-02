@@ -29,7 +29,7 @@ if (session.getAttribute("user") == null) {
                 String user = (String) session.getAttribute("user");
                 if (user != null) {
             %>
-                <li><a href="ReservationSummaryServlet">Account</a></li>
+                <li><a href="ReservationSummaryServlet" class="active">Account</a></li>
                 <li><a href="logout.jsp">Logout</a></li>
             <%
                 } else {

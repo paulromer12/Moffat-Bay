@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.moffatbay.models.Reservation" %>
+<%@ page import="java.util.List" %>
 <%
 if (session.getAttribute("user") == null) {
     response.sendRedirect("login.jsp");
@@ -46,13 +47,21 @@ if (session.getAttribute("user") == null) {
     <% } %>
 <form action="ReservationLookupServlet" method="get" style="display: flex; flex-direction: column; gap: 12px;">
     <label for="reservationNumber">Reservation Number:</label>
-    <input type="number" name="reservationNumber" id="reservationNumber" class="reservation-input" required>
+    <input type="number" name="reservationNumber" id="reservationNumber" class="reservation-input">
+
+    <label for="email">or Email Address:</label>
+    <input type="email" name="email" id="email" class="reservation-input">
+
+    <small>Enter either your reservation number or your email address.</small>
+
     <button type="submit">Lookup</button>
 </form>
 </div>
 
 <%
 Reservation res = (Reservation) request.getAttribute("reservation");
+List<Reservation> reservations = (List<Reservation>) request.getAttribute("reservations");
+
 if (res != null) {
 %>
     <div class="room-list">
@@ -68,6 +77,23 @@ if (res != null) {
         </div>
     </div>
 <%
+} else if (reservations != null && !reservations.isEmpty()) {
+    for (Reservation r : reservations) {
+%>
+    <div class="room-list">
+        <div class="room-card">
+            <h2>Reservation #<%= r.getReservationId() %></h2>
+            <p><strong>Guest:</strong> <%= r.getGuestName() %></p>
+            <p><strong>Room Type:</strong> <%= r.getRoomType() %></p>
+            <p><strong>Check-In:</strong> <%= r.getCheckIn() %></p>
+            <p><strong>Check-Out:</strong> <%= r.getCheckOut() %></p>
+            <p><strong>Guests:</strong> <%= r.getNumGuests() %></p>
+            <p><strong>Total Price:</strong> $<%= r.getTotalPrice() %></p>
+            <button onclick="location.href='reservation.jsp'">Back to Cabins</button>
+        </div>
+    </div>
+<%
+    }
 }
 %>
 </body>

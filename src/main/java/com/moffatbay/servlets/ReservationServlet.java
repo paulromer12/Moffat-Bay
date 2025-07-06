@@ -30,7 +30,7 @@ public class ReservationServlet extends HttpServlet {
         // Basic validation
         if (roomTypeIdStr == null || numGuestsStr == null || checkInStr == null || checkOutStr == null || totalPriceStr == null) {
             request.setAttribute("error", "Missing reservation details.");
-            request.getRequestDispatcher("reserve.jsp").forward(request, response);
+            request.getRequestDispatcher("reservation.jsp").forward(request, response);
             return;
         }
 
@@ -54,7 +54,7 @@ public class ReservationServlet extends HttpServlet {
                         userId = rs.getInt("user_id");
                     } else {
                         request.setAttribute("error", "User not found.");
-                        request.getRequestDispatcher("reserve.jsp").forward(request, response);
+                        request.getRequestDispatcher("reservation.jsp").forward(request, response);
                         return;
                     }
                 }
@@ -75,7 +75,7 @@ public class ReservationServlet extends HttpServlet {
                         response.sendRedirect("ReservationSummaryServlet");
                     } else {
                         request.setAttribute("error", "Reservation failed. Please try again.");
-                        request.getRequestDispatcher("reserve.jsp").forward(request, response);
+                        request.getRequestDispatcher("reservation.jsp").forward(request, response);
                     }
                 }
 
@@ -83,11 +83,11 @@ public class ReservationServlet extends HttpServlet {
 
         } catch (ClassNotFoundException e) {
             request.setAttribute("error", "MySQL JDBC driver not found.");
-            request.getRequestDispatcher("reserve.jsp").forward(request, response);
+            request.getRequestDispatcher("reservation.jsp").forward(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
             request.setAttribute("error", "Database error: " + e.getMessage());
-            request.getRequestDispatcher("reserve.jsp").forward(request, response);
+            request.getRequestDispatcher("reservation.jsp").forward(request, response);
         }
     }
 
@@ -95,6 +95,6 @@ public class ReservationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // redirect to reservation form
-        response.sendRedirect("reserve.jsp");
+        response.sendRedirect("reservation.jsp");
     }
 }

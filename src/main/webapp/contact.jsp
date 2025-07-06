@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact - Moffat Bay Lodge</title>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/contact.css">
+    
+    
 </head>
 <body>
     <div class="landing-container">

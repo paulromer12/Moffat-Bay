@@ -21,12 +21,15 @@ body, html {
 }
 /* Header with logo and nav */
 header {
-    background-color: #283618;
-    padding: 12px 24px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 header h1 {
@@ -36,49 +39,6 @@ header h1 {
     margin-left: 20px;
 }
 
-/* Top navigation bar */
-nav {
-  background-color: #283618;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-}
-
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #FEFAE0;
-}
-
-/* Navigation links */
-.navbar {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li a {
-  color: #FEFAE0;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 12px;
-  transition: background-color 0.3s, color 0.3s;
-  border-radius: 4px;
-}
-
-.navbar li a:hover {
-  background-color: #DDA15E;
-  color: #283618;
-}
-
-.navbar li a.active {
-  background-color: #BC6C25;
-}
-
-/*
 nav ul {
     list-style: none;
     font-family: 'Merriweather', serif;
@@ -102,8 +62,6 @@ nav ul li a:hover {
     color: white;
     border-bottom: 2px solid #aaa;
 }
-
-*/
 
 /* Center content with button */
 .center-content {

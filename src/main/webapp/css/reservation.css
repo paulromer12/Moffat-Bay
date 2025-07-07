@@ -78,20 +78,3 @@
   color: #BC6C25;
   font-weight: bold;
 }
-
-.reservation-input {
-  padding: 10px;
-  border: 1px solid #BC6C25;
-  border-radius: 4px;
-  font-size: 14px;
-  transition: border-color 0.3s;
-}
-
-.reservation-input:focus {
-  border-color: #DDA15E;
-  outline: none;
-}
-
-.room-list {
-    margin-bottom: 40px; /* or whatever spacing you like */
-}

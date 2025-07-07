@@ -12,10 +12,10 @@
  <nav>
        <div class="logo">Moffat Bay Lodge</div>
 	<ul class="navbar">
-	    <li><a href="index.jsp">Home</a></li>
+	    <li><a href="index.jsp" class="active">Home</a></li>
 	    <li><a href="reservation.jsp">Cabins</a></li>
 	    <li><a href="attractions.jsp">Attractions</a></li>
-	    <li><a href="about.jsp" class="active">About</a></li>
+	    <li><a href="about.jsp">About</a></li>
 	    <li><a href="contact.jsp">Contact</a></li>
 	    <%
 	        String user = (String) session.getAttribute("user");
@@ -56,7 +56,7 @@
         <div class="cta-item">
             <img src="images/about-cabin.jpg" alt="Cabins">
             <p>Cabins</p>
-            <a href="reservation.jsp"><button>Book Now</button></a>
+            <a href="registration.jsp"><button>Book Now</button></a>
         </div>
         <div class="cta-item">
             <img src="images/about-attraction.jpg" alt="Attractions">

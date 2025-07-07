@@ -51,15 +51,4 @@
   <servlet-name>ReservationSummaryServlet</servlet-name>
   <url-pattern>/ReservationSummaryServlet</url-pattern>
 </servlet-mapping>
-
-<!-- REservationLookupServlet Configuration -->
-
-<servlet>
-  <servlet-name>ReservationLookupServlet</servlet-name>
-  <servlet-class>com.moffatbay.servlets.ReservationLookupServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-  <servlet-name>ReservationLookupServlet</servlet-name>
-  <url-pattern>/ReservationLookupServlet</url-pattern>
-</servlet-mapping>
 </web-app>

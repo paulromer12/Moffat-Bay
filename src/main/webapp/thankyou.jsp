@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact - Moffat Bay Lodge</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/contact.css">
-    
-    
+    <title>Thank You</title>
+       <link rel="stylesheet" href="css/login.css">
+       <link rel="stylesheet" href="css/thankyou.css">
 </head>
 <body>
     <div class="landing-container">
@@ -25,15 +23,8 @@
         </header>
 
         <div class="center-content">
-            <h2>Contact Us</h2>
-            <p>We'd love to hear from you! Fill out the form below and we'll get back to you soon.</p>
-            
-            <form class="contact-form" action="thankyou.jsp" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <h2>Thank You!</h2>
+            <p>Your message has been received. We'll be in touch soon!</p>
         </div>
     </div>
 </body>

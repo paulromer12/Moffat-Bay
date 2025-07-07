@@ -17,8 +17,8 @@ if (session.getAttribute("user") == null) {
     <nav>
         <div class="logo">Moffat Bay Lodge</div>
         <ul class="navbar">
-            <li><a href="index.jsp" class="active">Home</a></li>
-            <li><a href="reservation.jsp">Cabins</a></li>
+            <li><a href="index.jsp" >Home</a></li>
+            <li><a href="reservation.jsp" class="active">Cabins</a></li>
             <li><a href="attractions.jsp">Attractions</a></li>
             <li><a href="about.jsp">About</a></li>
             <li><a href="contact.jsp">Contact</a></li>
@@ -114,7 +114,22 @@ if (session.getAttribute("user") == null) {
               </form>
           </div>
       </div>
+      <div>
+              <% if (request.getAttribute("error") != null) { %>
+            <p class="error"><%= request.getAttribute("error") %></p>
+        <% } %>
+        </div>
+<div class="room-list">
+    <div class="room-card">
+        <h2>Need to look up a previous reservation?</h2>
+        <p>Use the button below to view previous reservations.</p>
+        <button onclick="location.href='reservationLookup.jsp'">Reservation Look Up</button>
+    </div>
+</div>
+
     </main>
+    
+
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {

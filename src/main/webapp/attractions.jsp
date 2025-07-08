@@ -2,32 +2,66 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Attractions at Moffat Bay Lodge</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f4f9f9;
-        }
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/attractions.css">
+</head>
+<body>
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
+<!-- Navigation -->
+<nav>
+    <div class="logo">Moffat Bay Lodge</div>
+    <ul class="navbar">
+        <li><a href="index.jsp">Home</a></li>
+        <li><a href="reservation.jsp">Cabins</a></li>
+        <li><a href="attractions.jsp" class="active">Attractions</a></li>
+        <li><a href="about.jsp">About</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
+        <%
+            String user = (String) session.getAttribute("user");
+            if (user != null) {
+        %>
+            <li><a href="ReservationSummaryServlet">Account</a></li>
+            <li><a href="logout.jsp">Logout</a></li>
+        <%
+            } else {
+        %>
+            <li><a href="login.jsp">Login</a></li>
+        <%
+            }
+        %>
+    </ul>
+</nav>
+    <h1>Attractions at Moffat Bay Lodge</h1>
 
-        .cards-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .card {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            width: 260px;
-            transition: transform 0.2s ease-in-out;
+    <div class="attractions-container">
+    <div class="cards-container">
+        <div class="card">
+            <h3>Hiking</h3>
+            <p>Explore scenic trails across lush forests and breathtaking landscapes.</p>
+            <p><strong>Price:</strong> $30 per person</p>
+            <p><strong>Status:</strong> Available</p>
+        </div>
+        <div class="card">
+            <h3>Kayaking</h3>
+            <p>Paddle the crystal-clear waters and enjoy peaceful views of the island.</p>
+            <p><strong>Price:</strong> $45 per hour</p>
+            <p><strong>Status:</strong> Available</p>
+        </div>
+        <div class="card">
+            <h3>Whale Watching</h3>
+            <p>Join guided tours to spot majestic whales in their natural habitat.</p>
+            <p><strong>Price:</strong> $60 per person</p>
+            <p><strong>Status:</strong> Seasonal</p>
+        </div>
+        <div class="card">
+            <h3>Scuba Diving</h3>
+            <p>Discover vibrant marine life with certified instructors for all levels.</p>
+            <p><strong>Price:</strong> $80 per dive</p>
+            <p><strong>Status:</strong> Available</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

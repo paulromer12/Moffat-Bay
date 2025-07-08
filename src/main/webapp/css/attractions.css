@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.attractions-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.card {
+    width: 260px;
+    background-color: #fff;
+    border: 2px solid #DDA15E;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(40, 54, 24, 0.2);
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(40, 54, 24, 0.3);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #283618;
+}

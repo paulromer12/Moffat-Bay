@@ -13,11 +13,16 @@
         <div class="logo">Moffat Bay Lodge</div>
         <ul class="navbar">
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="cabins.jsp">Cabins</a></li>
+            <li><a href="reservation.jsp">Cabins</a></li>
             <li><a href="attractions.jsp">Attractions</a></li>
             <li><a href="about.jsp">About</a></li>
             <li><a href="contact.jsp" class="active">Contact</a></li>
-            <li><a href="login.jsp">Login</a></li>
+            <% if (session.getAttribute("user") != null) { %>
+                <li><a href="ReservationSummaryServlet">Account</a></li>
+                <li><a href="logout.jsp">Logout</a></li>
+            <% } else { %>
+                <li><a href="login.jsp">Login</a></li>
+            <% } %>
         </ul>
     </nav>
 

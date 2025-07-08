@@ -31,23 +31,30 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   margin: 0 auto;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
   padding: 12px;
   font-size: 14px;
   border: 1px solid #DDA15E;
   border-radius: 6px;
   background-color: #fff;
   color: #283618;
+  box-sizing: border-box; 
+  width: 100%;
 }
 
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
+  border: 1px solid #DDA15E;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #283618;
 }
 
 /* Submit Button */
@@ -67,15 +74,3 @@
   background-color: #DDA15E;
   color: #283618;
 }
-
-/* Optional: Responsive adjustments */
-@media (max-width: 600px) {
-  .landing-container {
-    padding: 20px 40px;
-  }
-
-  .contact-form {
-    width: 100%;
-  }
-}
-

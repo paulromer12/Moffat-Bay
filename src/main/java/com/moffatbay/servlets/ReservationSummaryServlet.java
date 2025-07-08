@@ -38,7 +38,7 @@ public class ReservationSummaryServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             
             try (Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "root")) {
+                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "BV-SQL@2025!")) {
                 
                 // Get user's reservations with room type information
                 String sql = "SELECT r.reservation_ID, r.check_in_date, r.check_out_date, " +

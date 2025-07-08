@@ -4,7 +4,7 @@
 <head>
     <title>About Us</title>
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/about.css">  
 </head>
 <body>
 

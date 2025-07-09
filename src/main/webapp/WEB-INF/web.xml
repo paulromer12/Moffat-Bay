@@ -62,4 +62,14 @@
   <servlet-name>ReservationLookupServlet</servlet-name>
   <url-pattern>/ReservationLookupServlet</url-pattern>
 </servlet-mapping>
+
+<!-- AttractionsServlet Configuration -->
+<servlet>
+  <servlet-name>AttractionsServlet</servlet-name>
+  <servlet-class>com.moffatbay.servlets.AttractionsServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>AttractionsServlet</servlet-name>
+  <url-pattern>/AttractionsServlet</url-pattern>
+</servlet-mapping>
 </web-app>

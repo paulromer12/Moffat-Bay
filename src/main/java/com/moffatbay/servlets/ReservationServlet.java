@@ -42,7 +42,9 @@ public class ReservationServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             try (Connection conn = DriverManager.getConnection(
+
                     "jdbc:mysql://localhost:3306/moffat_bay", "moffat", "password")) {
+
 
                 // get the user's ID
                 int userId = -1;

@@ -20,7 +20,8 @@ public class LoginServlet extends HttpServlet {
 
             try (Connection conn = DriverManager.getConnection(
 
-                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "root")) {
+                    "jdbc:mysql://localhost:3306/moffat_bay", "moffat", "password")) {
+
 
 
                 String sql = "SELECT password_hash, first_name FROM User WHERE email = ?";

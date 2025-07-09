@@ -50,31 +50,34 @@ nav .logo {
 }
 
 /* Login form container */
-.login-container {
-  width: 340px;
-  margin: 60px auto;
-  padding: 28px;
-  background-color: #fff;
-  border: 2px solid #DDA15E;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(40, 54, 24, 0.2);
+.login-container{
+  max-width: 360px;
+  width: 90%;          
+  margin: 72px auto;         
+  padding: 2rem 2.5rem;      
+  background: #ffffff;
+  border: 1px solid #BC6C25; 
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(40,54,24,0.15);
+  box-sizing: border-box;
 }
 
 .login-container h2 {
   text-align: center;
   color: #606C38;
-  margin-bottom: 24px;
+  margin: 24px;
 }
 
 /* Input fields */
-input[type="text"],
-input[type="password"] {
+.login-container input[type="text"],
+.login-container input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 14px;
   border: 1px solid #BC6C25;
   border-radius: 4px;
   font-size: 14px;
+  box-sizing: border-box; 
 }
 
 /* Login button */

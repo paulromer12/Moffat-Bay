@@ -26,7 +26,8 @@ public class ReservationLookupServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             try (Connection conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/moffat_bay", "root", "BV-SQL@2025!")) {
+
+                    "jdbc:mysql://localhost:3306/moffat_bay", "moffat", "password")) {
 
                 String sql;
                 PreparedStatement stmt;

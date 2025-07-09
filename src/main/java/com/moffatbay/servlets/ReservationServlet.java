@@ -43,7 +43,7 @@ public class ReservationServlet extends HttpServlet {
 
             try (Connection conn = DriverManager.getConnection(
 
-                    "jdbc:mysql://localhost:3306/moffatbay", "root", "password")) { // I have to remove the underscore for it to work with mine - William, also be sure to enter your proper password
+                    "jdbc:mysql://localhost:3306/moffat_bay", "moffat", "password")) {
 
 
                 // get the user's ID

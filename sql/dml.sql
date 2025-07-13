@@ -21,9 +21,10 @@ INSERT INTO Attractions (name, description, price, availability_status) VALUES
 
 -- 4. Populate RoomType
 INSERT INTO RoomType (name, description, price_per_night) VALUES
+('Double Full', 'Two full beds', 120.00),
 ('Queen', 'Queen bed cabin', 135.00),
-('King', 'King bed cabin', 160.00),
-('Double Full', 'Two full beds', 120.00);
+('Double Queen', 'Two Queen Beds', 150.00),
+('King', 'King bed cabin', 160.00);
 
 -- 5. Populate Reservation
 INSERT INTO Reservation (user_ID, room_type_id, num_guests, check_in_date, check_out_date, total_price, status) VALUES

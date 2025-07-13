@@ -31,6 +31,16 @@
     <servlet-name>RegisterServlet</servlet-name>
     <url-pattern>/register</url-pattern>
   </servlet-mapping>
+
+<!--  ConfirmReservationServlet Configuration -->  
+<servlet>
+  <servlet-name>ConfirmReservationServlet</servlet-name>
+  <servlet-class>com.moffatbay.servlets.ConfirmReservationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ConfirmReservationServlet</servlet-name>
+  <url-pattern>/ConfirmReservationServlet</url-pattern>
+</servlet-mapping>
   
   <!-- ReservastionServlet Configuration  -->
   <servlet>

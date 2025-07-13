@@ -18,14 +18,13 @@ public class ReservationServlet extends HttpServlet {
             return;
         }
 
-        String email = (String) session.getAttribute("user");
-
         // Get form inputs
         String roomTypeIdStr = request.getParameter("roomTypeId");
         String numGuestsStr = request.getParameter("numGuests");
         String checkInStr = request.getParameter("checkIn");
         String checkOutStr = request.getParameter("checkOut");
         String totalPriceStr = request.getParameter("totalPrice");
+        String roomTypeName = request.getParameter("roomTypeName");
 
         // Basic validation
         if (roomTypeIdStr == null || numGuestsStr == null || checkInStr == null || checkOutStr == null || totalPriceStr == null) {
@@ -34,63 +33,15 @@ public class ReservationServlet extends HttpServlet {
             return;
         }
 
-        int roomTypeId = Integer.parseInt(roomTypeIdStr);
-        int numGuests = Integer.parseInt(numGuestsStr);
-        double totalPrice = Double.parseDouble(totalPriceStr);
+        // Forward to confirmation page
+        request.setAttribute("roomTypeId", roomTypeIdStr);
+        request.setAttribute("numGuests", numGuestsStr);
+        request.setAttribute("checkIn", checkInStr);
+        request.setAttribute("checkOut", checkOutStr);
+        request.setAttribute("totalPrice", totalPriceStr);
+        request.setAttribute("roomTypeName", roomTypeName);
 
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            try (Connection conn = DriverManager.getConnection(
-
-                    "jdbc:mysql://localhost:3306/moffat_bay", "moffat", "password")) {
-
-
-                // get the user's ID
-                int userId = -1;
-                String findUserSql = "SELECT user_id FROM User WHERE email = ?";
-                try (PreparedStatement userStmt = conn.prepareStatement(findUserSql)) {
-                    userStmt.setString(1, email);
-                    ResultSet rs = userStmt.executeQuery();
-                    if (rs.next()) {
-                        userId = rs.getInt("user_id");
-                    } else {
-                        request.setAttribute("error", "User not found.");
-                        request.getRequestDispatcher("reservation.jsp").forward(request, response);
-                        return;
-                    }
-                }
-
-                // Insert the reservation
-                String insertSql = "INSERT INTO Reservation (user_ID, room_type_id, num_guests, check_in_date, check_out_date, total_price, status) VALUES (?, ?, ?, ?, ?, ?, ?)";
-                try (PreparedStatement stmt = conn.prepareStatement(insertSql)) {
-                    stmt.setInt(1, userId);
-                    stmt.setInt(2, roomTypeId);
-                    stmt.setInt(3, numGuests);
-                    stmt.setDate(4, Date.valueOf(checkInStr));
-                    stmt.setDate(5, Date.valueOf(checkOutStr));
-                    stmt.setDouble(6, totalPrice);
-                    stmt.setString(7, "confirmed");
-
-                    int rows = stmt.executeUpdate();
-                    if (rows > 0) {
-                        response.sendRedirect("ReservationSummaryServlet");
-                    } else {
-                        request.setAttribute("error", "Reservation failed. Please try again.");
-                        request.getRequestDispatcher("reservation.jsp").forward(request, response);
-                    }
-                }
-
-            }
-
-        } catch (ClassNotFoundException e) {
-            request.setAttribute("error", "MySQL JDBC driver not found.");
-            request.getRequestDispatcher("reservation.jsp").forward(request, response);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            request.setAttribute("error", "Database error: " + e.getMessage());
-            request.getRequestDispatcher("reservation.jsp").forward(request, response);
-        }
+        request.getRequestDispatcher("reservationConfirmation.jsp").forward(request, response);
     }
 
     @Override

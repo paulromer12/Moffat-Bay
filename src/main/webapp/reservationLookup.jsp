@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.moffatbay.models.Reservation" %>
 <%@ page import="java.util.List" %>
-<%
-if (session.getAttribute("user") == null) {
-    response.sendRedirect("login.jsp");
-    return;
-}
-%>
+
 <!DOCTYPE html>
 <html>
 <head>

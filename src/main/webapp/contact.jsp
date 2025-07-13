@@ -39,6 +39,8 @@
                 <button type="submit">Send Message</button>
             </form>
         </div>
+        <h4>Call Us: (509) 627-3333</h4>
+        <!-- <h4>moffat_bay@gmail.com</h4> -->
     </div>
 </body>
 </html>

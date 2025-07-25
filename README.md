@@ -1,8 +1,8 @@
 # Moffat Bay Lodge 
----
+
 ## Bellevue University
 ## CSD 460 
----
+
 ## Professor Woods
 ### Contributors
 William Renard
@@ -11,7 +11,7 @@ Julie Sakai
 Tazmin Somerville
 Tatiana Tan
 
-JEE JSP Capstone Project with a MySQL Database 
+## JEE JSP Capstone Project with a MySQL Database 
 
 Homepage
 ![homepage](screenshots/image.png)

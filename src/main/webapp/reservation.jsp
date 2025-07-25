@@ -41,7 +41,7 @@
 	      <div class="room-list">
 	                <!-- Double Full -->
 	          <div class="room-card">
-	              <img src="images/cabin.jpg" alt="Double Full Room">
+	              <img src="images/double full.png" alt="Double Full Room">
 	              <h2>Double Full</h2>
 	              <p>Two full beds, perfect for families or groups.</p>
 	              <p><strong>$120/night</strong></p>
@@ -64,7 +64,7 @@
 
 	          <!-- Queen Room -->
 	          <div class="room-card">
-	              <img src="images/cabin.jpg" alt="Queen Room">
+	              <img src="images/queen.png" alt="Queen Room">
 	              <h2>Queen Room</h2>
 	              <p>Spacious queen-bed cabin with a private balcony and great views.</p>
 	              <p><strong>$135/night</strong></p>
@@ -87,7 +87,7 @@
 
 	          <!-- Double Queen Room -->
 	          <div class="room-card">
-	              <img src="images/cabin.jpg" alt="Double Queen Room">
+	              <img src="images/double queen.png" alt="Double Queen Room">
 	              <h2>Double Queen Room</h2>
 	              <p>Two queen-beds in a cabin with a private balcony and fun for the whole family.</p>
 	              <p><strong>$150/night</strong></p>
@@ -110,7 +110,7 @@
 
 	          <!-- King Room -->
 	          <div class="room-card">
-	              <img src="images/cabin.jpg" alt="King Room">
+	              <img src="images/king.png" alt="King Room">
 	              <h2>King Room</h2>
 	              <p>Luxurious king-bed suite with fireplace and lakeside view.</p>
 	              <p><strong>$160/night</strong></p>

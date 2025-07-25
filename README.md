@@ -1,15 +1,13 @@
 # Moffat Bay Lodge 
+## CSD 460 Bellevue University
 
-## Bellevue University
-## CSD 460 
-
-## Professor Woods
 ### Contributors
-William Renard
-Paul Romer
-Julie Sakai
-Tazmin Somerville
-Tatiana Tan
+Professor Woods
+- William Renard
+- Paul Romer
+- Julie Sakai
+- Tazmin Somerville
+- Tatiana Tan
 
 ## JEE JSP Capstone Project with a MySQL Database 
 
